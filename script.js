@@ -10,19 +10,21 @@ async function api(){
 
    
      parent1.innerHTML+=`
-          <div class-col col-lg-4 col-sm-12>
-          <div class="card">
+          <div id="cardDetails" class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+          <div class="card h-100">
            <div class="card-header">
            <h5 class="card-title">${element.name.common}</h5>
           </div><br>
-            <div class="img">
-          <img src="${element.flags.png}">
-         </div>
-          <div class="card-body">
+          <div class="card-body">  
+          <img src="${element.flags.png}" class="card-img-top">
          <div class="card-text">
-         <div>Capital:${element.capital}</div>
-         <div>Region:${element.region}</div>
-         <div>Country Code:${element.cca3}</div>
+         <ul class="list-group">
+         <li class="list-group-item card-text"><b>Capital:${element.capital}</li>
+         <li class="list-group-item card-text"><b>Region:${element.region}</li>
+         <li class="list-group-item card-text"><b>Country Code:${element.cca3}</li>
+         
+       </div>
+        
 
          <button class="btn btn-primary" target="_blank" value="${element.name.common}">Click for Weather</button>
 
